@@ -1,9 +1,9 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import BoxPage from "./components/BoxPage";
 import FormPage from "./components/FormPage";
 import ItemListPage from "./components/ItemListPage";
 import TogglePage from "./components/TogglePage";
+import TodoListPage from "./components/TodoListPage";
 
 function App() {
   return (
@@ -34,6 +34,12 @@ function App() {
           >
             Link Toggle Page
           </Link>
+          <Link
+            to="/Todo"
+            className="mx-2 bg-emerald-600 text-white p-2 rounded"
+          >
+            Link Todo List
+          </Link>
         </nav>
         <Routes>
           <Route
@@ -51,6 +57,10 @@ function App() {
           <Route
             path="/Toggle"
             element={<TogglePage />}
+          />
+          <Route
+            path="/Todo"
+            element={<TodoListPage />}
           />
         </Routes>
       </div>
