@@ -4,6 +4,7 @@ import FormPage from "./components/FormPage";
 import ItemListPage from "./components/ItemListPage";
 import TogglePage from "./components/TogglePage";
 import TodoListPage from "./components/TodoListPage";
+import EffectPage from "./components/EffectPage";
 
 function App() {
   return (
@@ -40,6 +41,12 @@ function App() {
           >
             Link Todo List
           </Link>
+          <Link
+            to="/Effect"
+            className="mx-2 bg-emerald-600 text-white p-2 rounded"
+          >
+            Link Lat useEffect
+          </Link>
         </nav>
         <Routes>
           <Route
@@ -61,6 +68,10 @@ function App() {
           <Route
             path="/Todo"
             element={<TodoListPage />}
+          />
+          <Route
+            path="/Effect"
+            element={<EffectPage />}
           />
         </Routes>
       </div>
