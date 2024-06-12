@@ -5,6 +5,7 @@ import ItemListPage from "./components/ItemListPage";
 import TogglePage from "./components/TogglePage";
 import TodoListPage from "./components/TodoListPage";
 import EffectPage from "./components/EffectPage";
+import LatStatePage from "./components/LatStatePage";
 
 function App() {
   return (
@@ -47,6 +48,12 @@ function App() {
           >
             Link Lat useEffect
           </Link>
+          <Link
+            to="/State"
+            className="mx-2 bg-emerald-600 text-white p-2 rounded"
+          >
+            Link Lat useState2
+          </Link>
         </nav>
         <Routes>
           <Route
@@ -72,6 +79,10 @@ function App() {
           <Route
             path="/Effect"
             element={<EffectPage />}
+          />
+          <Route
+            path="/State"
+            element={<LatStatePage />}
           />
         </Routes>
       </div>
